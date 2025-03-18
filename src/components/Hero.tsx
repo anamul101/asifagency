@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <div>hero section add</div>
+    <div>hero section finally working</div>
   );
   
 };
