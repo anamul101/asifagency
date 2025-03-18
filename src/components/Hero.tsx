@@ -1,3 +1,6 @@
 export const Hero = () => {
-  return null;
+  return (
+    <div>hero section</div>
+  );
+  
 };
