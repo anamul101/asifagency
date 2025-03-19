@@ -5,7 +5,7 @@ import Button from "@/utility/button";
 
 export const Navbar = () => {
   return (
-    <div className="bg-[#020202]">
+    <div className="bg-[#020202] relative">
       <div className="sm:px-10 px-4">
         <div className="py-4 flex items-center justify-between">
           <div className="relative">
@@ -59,6 +59,11 @@ export const Navbar = () => {
           </nav>
         </div>
       </div>
+      <hr style={{
+            height: .5,
+            borderColor : '#696969'
+        }}/>
     </div>
+    
   );
 };
