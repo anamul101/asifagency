@@ -7,15 +7,43 @@ export const Hero = () => {
     <section className="bg-[#020202] container text-white py-40">
       <div className="flex justify-center ">
         <div className="inline-flex relative">
-          <h1 className="text-[2.5rem] font-light sm:leading-none leading-[1.1] sm:text-7xl xl:text-[89px] tracking-[-0.89px] font-aeonik text-center">
+        <h1
+  className="text-[2.7rem] font-light sm:leading-none leading-[1.1] sm:text-7xl xl:text-[89px] tracking-[-0.89px] font-aeonik text-center"
+  style={{ textShadow: "0px 10px 20px rgba(0, 0, 0, 0.35)" }}
+>
+  Power
+  <br className="lg:hidden" />
+  <span className="relative">
+    <span className="invisible">Government&nbsp;AI</span>
+    <div className="hero_cubespinner__5nU4O">
+      <div className="hero_face1____5ZN">Enterprise&nbsp;AI</div>
+      <div className="hero_face2__hWvJM">Government&nbsp;AI</div>
+      <div className="hero_face3__qUXn4">Generative&nbsp;AI</div>
+    </div>
+  </span>
+  <br />
+  With Your&nbsp;Data
+</h1>
+
+          {/* <h1 className="text-[2.5rem] font-light sm:leading-none leading-[1.1] sm:text-7xl xl:text-[89px] tracking-[-0.89px] font-aeonik text-center">
             Power
+            <span className="relative">
+            <span className="invisible">
+            Government AI
+            </span>
+            <div className="hero_titles">
+            <div className="hero_face1">Enterprise&nbsp;AI</div>
+            <div className="hero_face2">Government&nbsp;AI</div>
+            <div className="hero_face3">Generative&nbsp;AI</div>
+            </div>
+            </span>
             <span className="bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text [-webkit-background-clip:text]">
               {" "}
               Government AI
             </span>
             <br />
             With Your Data
-          </h1>
+          </h1> */}
           <Image src={cursor} alt="hero" className="absolute left-[-150px] top-[60px]"/>
           <Image src={message} alt="hero" className="absolute top-[50px] sm:left-[850px] mt-20"/>
         </div>
@@ -26,7 +54,7 @@ export const Hero = () => {
         your enterprise data to unlock the value of AI.
       </p>
       <div className="text-black flex justify-center">
-        <Button />
+      <Button />
         <a
           href="#"
           className="text-white text-sm relative focus-visible:outline outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[3px] inline-block"
