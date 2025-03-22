@@ -50,7 +50,7 @@ export const Navbar = () => {
             >
               testimonial
             </a>
-            <div className="flex items-center">
+            <div className="flex items-center gap-x-3">
               <Button />
               <a className="font-normal text-xs md:text-sm leading-5 block select-none cursor-pointer transition-all duration-300 hover:text-opacity-75 text-white">
                 Log In
