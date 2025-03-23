@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/utility/button";
 import Image from "next/image";
 import cursor from "../assets/images/cursor.png";
@@ -8,6 +9,7 @@ import meta from "../assets/images/meta.webp";
 import openai from "../assets/images/openai.webp";
 import cohere from "../assets/images/cohere.webp";
 import adept from "../assets/images/adept.webp";
+import { useEffect, useRef, useState } from "react";
 
 // export const Hero = () => {
 //   return (
@@ -86,6 +88,15 @@ import adept from "../assets/images/adept.webp";
 import React from "react";
 
 export const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after the component is mounted
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Delay to ensure smooth animation
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <section
       id=""
@@ -97,7 +108,7 @@ export const Hero = () => {
         <div className="absolute top-0 hidden -translate-x-1/2 lg:block left-1/2">
           <div className="w-full lg:w-auto pointer-events-none select-none">
             <div className="hidden md:block">
-              <div style={{ width: 1400, height: 650 }}>
+              <div>
                 <div
                   className="[&>canvas]:!w-full [&>canvas]:!h-full"
                   style={{ width: "100%", height: "100%" }}
@@ -117,13 +128,14 @@ export const Hero = () => {
         <Image
           alt=""
           loading="lazy"
-          width={1170}
+          width={1100}
           height={511}
           decoding="async"
           data-nimg={1}
-          className="top-7 sm:top-0 md:-top-7 opacity-0 select-none transition-opacity duration-1000 pointer-events-none absolute object-cover min-w-[155vw] sm:min-w-[120vw] lg:hidden left-[54%] md:left-1/2 -translate-x-1/2"
+          className={`top-7 my-7 sm:top-0 transition-opacity duration-1000 pointer-events-none absolute object-cover md:left-1/2 -translate-x-1/2 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
           style={{ color: "transparent" }}
-          sizes="100vw"
           src={hero}
         />
 
