@@ -103,7 +103,7 @@ export const Hero = () => {
       className="py-18 lg:py-20 bg-transparent pt-0 lg:pt-0 pb-0 lg:pb-0 text-white bg-black"
       style={{ backgroundColor: "black" }}
     >
-      <div className="container relative">
+      <div className="container relative py-5">
         {/* Canvas Section */}
         <div className="absolute top-0 hidden -translate-x-1/2 lg:block left-1/2">
           <div className="w-full lg:w-auto pointer-events-none select-none">
@@ -132,7 +132,7 @@ export const Hero = () => {
           height={511}
           decoding="async"
           data-nimg={1}
-          className={`top-7 my-7 sm:top-0 transition-opacity duration-1000 pointer-events-none absolute object-cover md:left-1/2 -translate-x-1/2 ${
+          className={`top-7 my-7 sm:top-0 transition-opacity duration-1000 pointer-events-none absolute object-cover md:left-1/2 -translate-x-1/2 py-4 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
           style={{ color: "transparent" }}
@@ -183,130 +183,6 @@ export const Hero = () => {
               </a>
             </div>
           </div>
-
-          {/* Logos Section */}
-          <section
-            id=""
-            className="py-18 lg:py-20 bg-transparent pt-0 lg:pt-0 pb-0 lg:pb-0 relative"
-          >
-            <div className="relative">
-              <div
-                className="pt-6 pb-12 sm:pb-16 sm:pt-20 xl:pb-16 xl:pt-24"
-                style={{ opacity: 1, visibility: "inherit" }}
-              >
-                <div className="hidden mb-12 text-sm leading-6 text-center text-neutral-400 lg:block">
-                  Scale works with{" "}
-                  <button
-                    className="section-title inline-block relative cursor-pointer transition-colors duration-300 hover:text-neutral-200"
-                    type="button"
-                  >
-                    Generative AI Companies
-                    <div className="transition-opacity duration-300 absolute bottom-0 h-[1px] w-full bg-silver opacity-0"></div>
-                    <div
-                      className="line opacity-0 scale-x-0 absolute bottom-0 h-[1px] w-full bg-white origin-left"
-                      style={{ opacity: 0, transform: "scale(0, 1)" }}
-                    ></div>
-                  </button>
-                  ,{" "}
-                  <button
-                    className="section-title inline-block relative cursor-pointer transition-colors duration-300 text-white"
-                    type="button"
-                  >
-                    U.S. Government Agencies
-                    <div className="transition-opacity duration-300 absolute bottom-0 h-[1px] w-full bg-silver opacity-100"></div>
-                    <div
-                      className="line opacity-0 scale-x-0 absolute bottom-0 h-[1px] w-full bg-white origin-left"
-                      style={{
-                        opacity: 100,
-                        transform:
-                          "translate3d(0px, 0px, 0px) scale(0.9993, 1)",
-                      }}
-                    ></div>
-                  </button>{" "}
-                  &{" "}
-                  <button
-                    className="section-title inline-block relative cursor-pointer transition-colors duration-300 hover:text-neutral-200"
-                    type="button"
-                  >
-                    Enterprises
-                    <div className="transition-opacity duration-300 absolute bottom-0 h-[1px] w-full bg-silver opacity-0"></div>
-                    <div
-                      className="line opacity-0 scale-x-0 absolute bottom-0 h-[1px] w-full bg-white origin-left"
-                      style={{ opacity: 0, transform: "scale(0, 1)" }}
-                    ></div>
-                  </button>
-                </div>
-
-                {/* Logos Grid */}
-                <div className="relative hidden lg:block h-14">
-                  <div className="logos absolute w-full top-1/2 -translate-y-1/2 transition-opacity duration-700 opacity-0">
-                    <div className="relative grid text-white">
-                      <ul className="items-center justify-center md:gap-y-16 justify-between flex lg:grid-cols-7 md:grid-cols-7 sm:grid-cols-4 grid-cols-4 gap-12 gap-y-10">
-                        {/* Logos List */}
-                        {[
-                          {
-                            alt: "microsoft",
-                            width: 100,
-                            height: 22,
-                            src: { microsoft },
-                          },
-                          {
-                            alt: "meta",
-                            width: 90,
-                            height: 20,
-                            src: { meta },
-                          },
-                          {
-                            alt: "openai",
-                            width: 90,
-                            height: 24,
-                            src: { openai },
-                          },
-                          {
-                            alt: "cohere",
-                            width: 140,
-                            height: 24,
-                            src: { cohere },
-                          },
-                          {
-                            alt: "adept",
-                            width: 75,
-                            height: 36,
-                            src: { adept },
-                          },
-                          {
-                            alt: "character ai",
-                            width: 129,
-                            height: 31,
-                            src: "/_next/image?url=%2Fstatic%2Fimages%2Flogos%2Fcustomers%2Fcharacterai.png&w=256&q=100",
-                          },
-                        ].map((logo, index) => (
-                          <li
-                            key={index}
-                            className="flex justify-center items-center"
-                          >
-                            <div className="relative">
-                              <Image
-                                alt={logo.alt}
-                                width={logo.width}
-                                height={logo.height}
-                                decoding="async"
-                                data-nimg={1}
-                                className="logo-grid_full-white__9DeNP"
-                                style={{ color: "transparent" }}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                src={logo.src as string}
-                              />
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
       </div>
     </section>

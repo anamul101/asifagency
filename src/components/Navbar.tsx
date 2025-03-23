@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import logosaas from "../assets/images/logosaas.png";
 import Menu from "../assets/icons/menu.svg";
@@ -17,7 +18,7 @@ export const Navbar = () => {
             />
           </div>
           <div className="border border-white border-opacity-30 h-10 w-10 inline-flex items-center justify-center rounded-lg sm:hidden">
-            <Menu className="text-white" />
+          <Menu className="text-white" />
           </div>
           <nav className="gap-6 items-center hidden sm:flex text-sm ">
             <a
