@@ -8,6 +8,7 @@ import { FAQs } from "@/components/FAQs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Research } from "@/components/Research";
+import ResearchSlider from "@/components/ResearchSlider";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <Research/>
+      {/* <ResearchSlider/> */}
       <Features />
       <ProductShowcase />
       <FAQs />

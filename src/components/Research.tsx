@@ -1,10 +1,11 @@
 import React from "react";
+import ResearchSlider from "./ResearchSlider";
 
 export const Research = () => {
   return (
     <section className="ρd__all ρd__section ρll3DQ py-10 bg-black text-white">
       <div className="ρd__all ρd__div ρ_3V1C7 container gap-16">
-        <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-10 md:mb-20 md:mt-12 ρi ρoDvz">
+        <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-5 md:mb-5 md:mt-12 ρi ρoDvz">
           {/* Heading */}
           <h2 className="font-aeonik leading-snug lg:leading-[1.25] text-3xl md:text-4.5xl lg:text-5xl [text-wrap:balance]">
             Frontier AI Research
@@ -33,7 +34,9 @@ export const Research = () => {
               <span className="after:content-[''] after:inline-block absolute inset-0 after:inset-0 after:absolute select-none pointer-events-none after:rounded-[11px] rounded-[11px] shadow-[inset_0_0_0_1px_rgba(255,255,255,1)] after:shadow-[inset_0_0_0_1px_rgba(200,139,196,0.4)]"></span>
             </a>
           </div>
+          
         </div>
+        <ResearchSlider/>
       </div>
     </section>
   );
