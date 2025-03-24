@@ -23,7 +23,7 @@ export const Research = () => {
             <a
               style={{ border: " 1px solid #9e789b", background: "#72556f" }}
               className="relative focus-visible:outline outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[1px] inline-block "
-              href="https://scale.com/research"
+              href="/"
             >
               <div style={{border: " 1px solid #9e789b"}} className="outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[1px] new-button_button--primary__EJ4AI font-medium justify-center flex flex-nowrap whitespace-nowrap hover:bg-[#5b3557] transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] new-button_button--pink__gdR3d text-sm px-[15px] py-[10px]">
                 Learn More

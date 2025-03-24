@@ -9,6 +9,7 @@ import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Research } from "@/components/Research";
 import ResearchSlider from "@/components/ResearchSlider";
+import GenerativeAISection from "@/components/GenerativeAISection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <Research/>
+      <GenerativeAISection/>
       {/* <ResearchSlider/> */}
       <Features />
       <ProductShowcase />
