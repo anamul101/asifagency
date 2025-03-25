@@ -67,7 +67,7 @@ const ResearchSlider: React.FC = () => {
     <section className="py-5 lg:py-20 bg-transparent pt-0 lg:pt-0 pb-0 lg:pb-0 overflow-hidden bg-black">
       <div className="container relative bg-black text-white py-5">
         <div>
-          <div ref={ref} className="keen-slider flex !overflow-visible cursor-grab  h-[140px] sm:h-[167px] xl:h-[192px] gap-3  opacity-100 visible">
+          <div  className="keen-slider flex !overflow-visible cursor-grab  h-[140px] sm:h-[167px] xl:h-[192px] gap-3  opacity-100 visible">
             {researchItems.map((items, i) => (
               <a
                 key={i}
