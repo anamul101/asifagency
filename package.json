@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.12",
+    "framer-motion": "^11.18.2",
     "keen-slider": "^6.8.6",
     "next": "^15.3.0-canary.19",
     "react": "^18",

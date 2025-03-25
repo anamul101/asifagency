@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useKeenSlider } from "keen-slider/react"
+import { useKeenSlider } from "keen-slider/react";
 import openai from "../assets/images/openai.webp";
 import meta from "../assets/images/meta.webp";
 import adept from "../assets/images/adept.webp";
@@ -8,11 +8,16 @@ import cohere from "../assets/images/cohere.webp";
 import anthropic from "../assets/images/anthropic.webp";
 import foundationModels from "../assets/images/foundationModels.webp";
 import dataModel from "../assets/images/dataModel.webp";
-import Keenslider from "./Keenslider";
+import Keenslider from "../components/Keenslider";
+import Slidertest from "./Slidertest";
 
 const GenerativeAISection = () => {
   return (
-    <section id="" style={{backgroundColor:"black", color:"white"}} className="py-18 lg:py-20 bg-transparent relative lg:pb-8 overflow-hidden ">
+    <section
+      id=""
+      style={{ backgroundColor: "black", color: "white" }}
+      className="py-18 lg:py-20 bg-transparent relative lg:pb-8 overflow-hidden "
+    >
       <div className="container relative ">
         <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-10 md:mb-20 md:mt-12 !mb-16">
           <div className="mb-5 lg:mb-5 overflow-hidden tracking-[3px] text-xs md:px-5 md:py-2 lg:text-xs uppercase bg-white bg-opacity-5 text-[#D1AAD7] rounded-full px-4 py-2">
@@ -31,7 +36,10 @@ const GenerativeAISection = () => {
               className="relative focus-visible:outline outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[1px] inline-block "
               href="/"
             >
-              <div style={{border: " 1px solid #9e789b"}} className="outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[1px] new-button_button--primary__EJ4AI font-medium justify-center flex flex-nowrap whitespace-nowrap hover:bg-[#5b3557] transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] new-button_button--pink__gdR3d text-sm px-[15px] py-[10px]">
+              <div
+                style={{ border: " 1px solid #9e789b" }}
+                className="outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[1px] new-button_button--primary__EJ4AI font-medium justify-center flex flex-nowrap whitespace-nowrap hover:bg-[#5b3557] transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] new-button_button--pink__gdR3d text-sm px-[15px] py-[10px]"
+              >
                 Book a Demo
                 <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
                   →
@@ -42,7 +50,7 @@ const GenerativeAISection = () => {
           </div>
         </div>
 
-        <Keenslider/>
+        <Slidertest />
 
         <p className="max-w-max mb-10 md:mb-12 text-center mx-auto uppercase leading-[1.70] text-xs px-3 sm:px-0 md:text-sm tracking-[4px]">
           GENERATIVE AI PROVIDERS WE PARTNER&nbsp;WITH:
@@ -63,7 +71,6 @@ const GenerativeAISection = () => {
                 className="logo-grid_full-white__9DeNP opacity-100 relative"
                 style={{ color: "transparent" }}
                 src={openai.src}
-                
               />
             </li>
             <li className="overflow-hidden relative flex items-center justify-center w-[230px] h-28 rounded-2xl">

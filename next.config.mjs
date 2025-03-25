@@ -7,6 +7,18 @@ const nextConfig = {
     );
 
     config.module.rules.push(
+       // vedio import code
+      {
+        test: /\.(webm|mp4)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next/static/videos/',
+            outputPath: 'static/videos/',
+            name: '[name].[hash].[ext]',
+          },
+        },
+      },
       // Reapply the existing rule, but only for svg imports ending in ?url
       {
         ...fileLoaderRule,
@@ -26,6 +38,10 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
 
     return config;
+  },
+  // Enable static video imports
+  images: {
+    domains: ['your-cdn-domain.com'], // if using external videos
   },
 };
 

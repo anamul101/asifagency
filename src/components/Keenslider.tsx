@@ -23,7 +23,7 @@ const Keenslider = () => {
       title: "Fine-Tuning and RLHF",
       content: "Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.",
       image: foundationModels,
-      video: null,
+      video: "https://scale.com/static/images/pages/homepage/why-scale/rlhf.webm",
     },
     {
       title: "Foundation Models",
@@ -35,15 +35,15 @@ const Keenslider = () => {
       title: "Enterprise Data",
       content: "Scale's Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation.",
       image: dataModel,
-      video: null,
+      video: "https://scale.com//static/images/pages/homepage//why-scale/chart.webm",
     },
   ];
 
   return (
-    <div className="flex justify-center flex-col mb-24 md:mb-40 xl:mb-16 sm:h-[700px] h-[590px] mx-auto xl:flex-row mt-28 xl:mt-0">
+    <div className="lg:w-[1216px] flex justify-center flex-col mb-24 md:mb-40 xl:mb-16 sm:h-[700px] h-[590px] mx-auto xl:flex-row mt-28 xl:mt-0">
       {/* Desktop Left Panel */}
       <div className="relative z-10 hidden w-full -mr-9 xl:inline-block xl:w-6/12 xl:min-w-[510px]">
-        <div className="absolute w-full -translate-y-1/2 top-1/2">
+        <div className="absolute w-full  -translate-y-1/2 top-1/2">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -101,7 +101,7 @@ const Keenslider = () => {
                 loading="lazy"
                 width="334"
                 height="307"
-                className="object-contain w-full h-auto"
+                className="object-contain"
                 src={typeof slide.image === "string" ? slide.image : slide.image.src}
               />
             </div>
