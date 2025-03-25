@@ -126,7 +126,7 @@ const Slidertest = () => {
   }, [activeTab, isMobile]);
 
   return (
-    <div className=" w-full max-w-[1216px] flex flex-col gap-x-20 mb-24 md:mb-40 xl:mb-16 h-auto min-h-[590px] sm:min-h-[700px] mx-auto px-4 xl:px-0 xl:flex-row mt-28 xl:mt-0">
+    <div className=" w-full max-w-[1216px] flex flex-col gap-x-20 mb-10 md:mb-20 xl:mb-16 h-auto min-h-[590px] sm:min-h-[700px] lg:min-h-[700px] md:min-h-[500px] mx-auto px-4 xl:px-0 xl:flex-row mt-10 xl:mt-0">
       {/* Desktop View - Left Side (Tabs) */}
       <div className="relative z-10 hidden w-full -mr-9 xl:inline-block xl:w-6/12 xl:min-w-[510px] ">
         <div className="absolute w-auto -translate-y-1/2 top-1/2">
@@ -164,7 +164,7 @@ const Slidertest = () => {
         ) : (
           <div
             ref={sliderRef}
-            className="keen-slider !overflow-visible pb-6"
+            className="keen-slider  pb-6"
           >
             {features.map((feature, index) => (
               <div key={index} className="keen-slider__slide">
@@ -191,7 +191,7 @@ const Slidertest = () => {
         <div className="w-full left-1/2 -translate-x-1/2 relative xl:hidden mt-4">
           <div
             ref={contentSliderRef}
-            className="keen-slider !overflow-visible pb-12"
+            className="keen-slider pb-12"
           >
             {features.map((item, index) => (
               <div key={index} className="space-y-4 keen-slider__slide px-4">
