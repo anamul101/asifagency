@@ -7,10 +7,10 @@ const BuildAISection = () => {
     <section
       style={{ backgroundColor: "black", color: "white" }}
       id="build-ai"
-      className="py-18 lg:py-20 bg-transparent relative "
+      className=" bg-transparent relative "
     >
-      <div className="container relative bg-black text-white">
-        <div className="select-none pointer-events-none absolute -top-[10%] -bottom-[10%] left-[5%] right-[5%] opacity-50 bg-gradient_background__GEkO8"></div>
+      <div className="container relative py-8 bg-black text-white">
+        <div className="select-none pointer-events-none absolute  left-[5%] right-[5%] opacity-50 bg-gradient_background__GEkO8"></div>
         <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-10 md:mb-20 md:mt-12 relative z-10 !mb-16">
           <div className="mb-5 lg:mb-5 overflow-hidden tracking-[3px] text-xs md:px-5 md:py-2 lg:text-xs uppercase bg-white bg-opacity-5 text-[#D1AAD7] rounded-full px-4 py-2">
             <span>Build AI</span>
@@ -44,7 +44,7 @@ const BuildAISection = () => {
                   <ColorButton/>
                 </div>
               </div>
-              <div className="bg-[#09060a] border border-[rgba(229,231,235,0.09)] -m-3 md:mt-0 md:mx-0 relative lg:flex lg:-translate-x-10 3xl:-translate-x-14 transition-transform duration-1000 ease-out rounded-[10px] shadow-xl xl:shadow-super overflow-hidden lg:mb-0 mb-9 lg:w-1/2 xl:w-[649px] xl:h-[402px] select-none aspect-[649/402] min-w-full lg:min-w-[50%] xl:min-w-[unset] max-w-[calc(100%+24px)]">
+              <div className=" bg-[#09060a] border border-[rgba(229,231,235,0.09)] -m-3 md:mt-0 md:mx-0 relative lg:flex lg:-translate-x-10 3xl:-translate-x-14 transition-transform duration-1000 ease-out rounded-[10px] shadow-xl xl:shadow-super overflow-hidden lg:mb-0 mb-9 lg:w-1/2 xl:w-[649px] xl:h-[402px] select-none aspect-[649/402] min-w-full lg:min-w-[50%] xl:min-w-[unset] max-w-[calc(100%+24px)]">
                 <div className="overflow-hidden rounded-[10px] w-full relative aspect-[649/402] box_box__chat__AoICB">
                   <div className="grid grid-cols-3 p-2 sm:p-3 md:grid-cols-3">
                     <div className="flex space-x-[3px] sm:space-x-1.5">
@@ -233,7 +233,7 @@ const BuildAISection = () => {
                           data-selected=""
                           aria-labelledby="headlessui-tabs-tab-:R6bdnluqd6:"
                         >
-                          <div className="bg-black relative w-full border border-[#D1AAD7]/[0.16] lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-10 3xl:translate-x-14 transition-transform duration-1000 ease-out rounded-[10px] shadow-xl xl:shadow-super overflow-hidden lg:mb-0 mb-9 lg:w-1/2 xl:w-[540px] xl:h-[402px] select-none aspect-[649/402] min-w-full lg:min-w-[50%] xl:min-w-[unset] max-w-max">
+                          <div className="bg-black relative w-full border border-[#D1AAD7]/[0.16] lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-10 3xl:translate-x-14 transition-transform duration-1000 ease-out rounded-[10px] shadow-xl xl:shadow-super overflow-hidden lg:mb-0 mb-9 lg:w-1/2 xl:w-[530px] xl:h-[402px] select-none aspect-[649/402] min-w-full lg:min-w-[50%] xl:min-w-[unset] max-w-max">
                             <iframe
                               src="https://lidar-now.scale.com/scene?title=Scene%20%231"
                               className="absolute inset-0 w-full h-full bg-black"
@@ -350,7 +350,7 @@ const BuildAISection = () => {
                 <ColorButton/>
                 </div>
               </div>
-              <div className=" border border-[rgba(229,231,235,0.09)] -m-3 md:mt-0 md:mx-0 relative lg:flex lg:-translate-x-10 3xl:-translate-x-14 transition-transform duration-1000 ease-out rounded-[10px] shadow-xl xl:shadow-super overflow-hidden lg:mb-0 mb-9 lg:w-1/2 xl:w-[630px] xl:h-[420px] select-none aspect-[630/420] min-w-full lg:min-w-[50%] xl:min-w-[unset] max-w-[calc(100%+24px)]">
+              <div className="ml-[-14px] border border-[rgba(229,231,235,0.09)] -m-3 md:mt-0 md:mx-0 relative lg:flex lg:-translate-x-10 3xl:-translate-x-14 transition-transform duration-1000 ease-out rounded-[10px] shadow-xl xl:shadow-super overflow-hidden lg:mb-0 mb-9 lg:w-1/2 xl:w-[630px] xl:h-[420px] select-none aspect-[630/420] min-w-full lg:min-w-[50%] xl:min-w-[unset] max-w-[calc(100%+24px)]">
                 <div className="border-[rgba(229,231,235,0.09)] overflow-hidden rounded-[10px] w-full relative aspect-[630/420] box_box__chat__AoICB">
                   <img
                     alt="data-curation"
