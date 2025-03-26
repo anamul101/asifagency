@@ -10,6 +10,8 @@ import { Footer } from "@/components/Footer";
 import { Research } from "@/components/Research";
 import ResearchSlider from "@/components/ResearchSlider";
 import GenerativeAISection from "@/components/GenerativeAISection";
+import BuildAISection from "@/components/BuildAISection";
+ // Ensure BuildAISection.tsx exists in the same directory
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
       <LogoTicker />
       <Research/>
       <GenerativeAISection/>
+      <BuildAISection/>
       {/* <ResearchSlider/> */}
       <Features />
       <ProductShowcase />
