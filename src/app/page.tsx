@@ -13,6 +13,7 @@ import GenerativeAISection from "@/components/GenerativeAISection";
 import BuildAISection from "@/components/BuildAISection";
 import GenerativeAIApplications from "@/components/GenerativeAIApplications";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
+import TestimonialSlider from "@/components/TestimonialSlider";
  // Ensure BuildAISection.tsx exists in the same directory
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <BuildAISection/>
       <GenerativeAIApplications/>
       <CaseStudiesSection/>
+      <TestimonialSlider/>
       {/* <ResearchSlider/> */}
       <Features />
       <ProductShowcase />
