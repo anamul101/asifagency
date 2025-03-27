@@ -114,7 +114,7 @@ const CaseStudiesSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0A0B0D] relative">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0A0B0D] relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none select-none bg-gradient-to-b from-[#D1AAD7] to-transparent"></div>
       
@@ -133,7 +133,7 @@ const CaseStudiesSection = () => {
         </div>
 
         {/* Slider */}
-        <div className="relative z-0">
+        <div className="relative z-0 overflow-hidden">
           <div ref={sliderRef} className="keen-slider !overflow-visible cursor-grab h-full opacity-100 visible">
             {slides.map((slide, index) => (
               <a
