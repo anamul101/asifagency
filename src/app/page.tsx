@@ -6,7 +6,6 @@ import { Features } from "@/components/Features";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { FAQs } from "@/components/FAQs";
 import { CallToAction } from "@/components/CallToAction";
-import { Footer } from "@/components/Footer";
 import { Research } from "@/components/Research";
 import ResearchSlider from "@/components/ResearchSlider";
 import GenerativeAISection from "@/components/GenerativeAISection";
@@ -16,6 +15,7 @@ import CaseStudiesSection from "@/components/CaseStudiesSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import Industry from "@/components/Industry";
 import FutureSection from "@/components/FutureSection";
+import Footer from "@/components/Footer";
 
  // Ensure BuildAISection.tsx exists in the same directory
 
@@ -38,7 +38,7 @@ export default function Home() {
       <ProductShowcase />
       <FAQs />
       <CallToAction />
-      <Footer />
+      <Footer/>
     </>
   );
 }

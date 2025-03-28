@@ -5,7 +5,7 @@ const FutureSection = () => {
   return (
     <div
       style={{ backgroundColor: "black", color: "white" }}
-      className="ρi ρxujys relative w-full overflow-hidden sm:overflow-visible"
+      className="relative w-full overflow-hidden sm:overflow-visible"
     >
       <hr className="border-0 bg-[linear-gradient(270deg,_rgba(255,_255,_255,_0.00)_0%,_#FFF_52.07%,_rgba(255,_255,_255,_0.00)_100%)] z-[1] opacity-[0.15] relative h-[1px] w-full max-w-[1006px] mx-auto" />
       <div className="absolute z-10 -translate-x-1/2 -top-10 sm:-top-6 left-[53%] lg:left-1/2 md:left-1/2">
