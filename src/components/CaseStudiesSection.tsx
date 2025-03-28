@@ -140,7 +140,7 @@ const CaseStudiesSection = () => {
                 key={index}
                 href={slide.href}
                 className="keen-slider__slide"
-                style={{ minWidth: '418.857px', maxWidth: '418.857px' }}
+                style={{ transform: 'translate3d(-2784px, 0px, 0px)', minWidth: '348px', maxWidth: '348px' }}
               >
                 <div className="aspect-[389/243] rounded-lg relative z-10 bg-black overflow-hidden">
                   <Image
