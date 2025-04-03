@@ -1,9 +1,20 @@
-import React from "react";
-import Button from "../utility/button"
+"use client";
+import React, { useState } from "react";
+import Button from "../utility/button";
+import Menu from "../assets/icons/menu.svg";
 
 const HeaderSection = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header style={{ backgroundColor: "black", color: "white" }}  className="bg-black text-left relative z-50 bg-offpurple/20 backdrop-blur-[6px] md:backdrop-blur-0 md:bg-transparent overflow-hidden">
+    <header
+      style={{ backgroundColor: "black", color: "white" }}
+      className="bg-black text-left relative z-50 bg-offpurple/20 backdrop-blur-[6px] md:backdrop-blur-0 md:bg-transparent overflow-hidden"
+    >
       <hr
         style={{
           backgroundImage:
@@ -12,9 +23,7 @@ const HeaderSection = () => {
         className="absolute bottom-0 w-full h-px -translate-x-1/2 border-0 opacity-10 left-1/2"
       />
 
-      <div></div>
-
-      <div className="container w-[1240px] py-2">
+      <div className="container w-[1200px] py-2">
         <div className="flex items-center lg:relative lg:justify-between h-14 lg:h-18">
           <div className="flex justify-between w-full lg:w-auto lg:relative lg:z-10">
             <div className="flex items-center">
@@ -31,223 +40,141 @@ const HeaderSection = () => {
               </div>
             </div>
 
-            <div className="flex items-center cursor-pointer lg:hidden">
-              <svg
-                className="w-6 h-auto fill-current text-white"
-                viewBox="0 0 24 12"
-              >
-                <rect width="24" height="2"></rect>
-                <rect y="5" width="24" height="2"></rect>
-                <rect y="10" width="24" height="2"></rect>
-              </svg>
-            </div>
-          </div>
-
-          <div className="opacity-0 lg:opacity-100 absolute lg:static pointer-events-none lg:pointer-events-auto">
-            <div className="">
-              <div className="z-auto hidden -translate-y-1/2 top-1/2 lg:absolute lg:left-0 lg:right-0 lg:justify-center lg:items-center lg:flex">
-                <div>
-                  <nav className="m-auto">
-                    <ul className="flex justify-center list-none m-0">
-                      <li className="relative" style={{ zIndex: 60 }}>
-                        <div className="relative" style={{ zIndex: 60 }}>
-                          <button
-                            className="text-white bg-transparent text-sm flex justify-center px-2 xl:px-4 border-0 relative z-10 hover:text-opacity-70"
-                            type="button"
-                          >
-                            Products
-                          </button>
-                          <div
-                            className="absolute pt-8 transform -translate-x-1/2 left-1/2"
-                            style={{ perspective: "1500px" }}
-                          ></div>
-                        </div>
-                      </li>
-
-                      <li className="relative" style={{ zIndex: 60 }}>
-                        <a
-                          className="text-white bg-transparent text-sm flex justify-center px-2 xl:px-4 border-0 relative z-10 hover:text-opacity-70"
-                          href="/leaderboard"
-                        >
-                          Leaderboards
-                        </a>
-                      </li>
-
-                      <li className="relative" style={{ zIndex: 60 }}>
-                        <div className="relative" style={{ zIndex: 60 }}>
-                          <button
-                            className="text-white bg-transparent text-sm flex justify-center px-2 xl:px-4 border-0 relative z-10 hover:text-opacity-70"
-                            type="button"
-                          >
-                            Enterprise
-                          </button>
-                          <div
-                            className="absolute pt-8 transform -translate-x-1/2 left-1/2"
-                            style={{ perspective: "1500px" }}
-                          ></div>
-                        </div>
-                      </li>
-
-                      <li className="relative" style={{ zIndex: 60 }}>
-                        <div className="relative" style={{ zIndex: 60 }}>
-                          <button
-                            className="text-white bg-transparent text-sm flex justify-center px-2 xl:px-4 border-0 relative z-10 hover:text-opacity-70"
-                            type="button"
-                          >
-                            Government
-                          </button>
-                          <div
-                            className="absolute pt-8 transform -translate-x-1/2 left-1/2"
-                            style={{ perspective: "1500px" }}
-                          ></div>
-                        </div>
-                      </li>
-
-                      <li className="relative" style={{ zIndex: 60 }}>
-                        <div className="relative" style={{ zIndex: 60 }}>
-                          <button
-                            className="text-white bg-transparent text-sm flex justify-center px-2 xl:px-4 border-0 relative z-10 hover:text-opacity-70"
-                            type="button"
-                          >
-                            Customers
-                          </button>
-                          <div
-                            className="absolute pt-8 transform -translate-x-1/2 left-1/2"
-                            style={{ perspective: "1500px" }}
-                          ></div>
-                        </div>
-                      </li>
-
-                      <li className="relative" style={{ zIndex: 60 }}>
-                        <div className="relative" style={{ zIndex: 60 }}>
-                          <button
-                            className="text-white bg-transparent text-sm flex justify-center px-2 xl:px-4 border-0 relative z-10 hover:text-opacity-70"
-                            type="button"
-                          >
-                            Resources
-                          </button>
-                          <div
-                            className="absolute pt-8 transform -translate-x-1/2 left-1/2"
-                            style={{ perspective: "1500px" }}
-                          ></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-
-              <div className="z-auto p-4 lg:hidden">
-                <div>
-                  <h4 className="text-neutral-400 block uppercase text-xs tracking-wider">
-                    Products
-                  </h4>
-                  <ul className="grid grid-cols-2 gap-y-4 mt-4 pb-4 border-b border-neutral-800">
-                    <div className="space-y-4">
-                      <li className="DropdownItem_dropdownItem__iI2LA m-0 p-0 select-none lg:whitespace-nowrap">
-                        <a href="/data-engine">
-                          <div
-                            style={{ WebkitBackfaceVisibility: "hidden" }}
-                            className="flex lg:items-center gap-1.5 md:gap-3 group font-normal transition-colors duration-300 ease"
-                          >
-                            <span className="w-4 h-4 block transform transition-transform duration-300 ease shrink-0 lg:h-10 lg:w-10">
-                              <img
-                                alt="engine"
-                                loading="lazy"
-                                width="40"
-                                height="40"
-                                decoding="async"
-                                data-nimg="1"
-                                style={{ color: "transparent" }}
-                                srcSet="/_next/image?url=%2Fstatic%2Fimages%2Fglobal%2Fheader%2Fproducts%2Fengine.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fstatic%2Fimages%2Fglobal%2Fheader%2Fproducts%2Fengine.png&amp;w=96&amp;q=75 2x"
-                                src="/_next/image?url=%2Fstatic%2Fimages%2Fglobal%2Fheader%2Fproducts%2Fengine.png&amp;w=96&amp;q=75"
-                              />
-                            </span>
-                            <p className="transition-opacity duration-300 opacity-90 group-hover:opacity-100">
-                              <span className="block text-xs md:text-sm text-white">
-                                Scale Data Engine
-                              </span>
-                              <span className="block text-sm mt-px text-neutral-400">
-                                Data for training models
-                              </span>
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-
-                      {/* More product items... */}
-                    </div>
-
-                    <div className="space-y-4">
-                      {/* More product items... */}
-                    </div>
-                  </ul>
-
-                  <div className="pb-4 border-b border-neutral-800">
-                    <h4 className="text-neutral-400 block mt-4 uppercase text-xs tracking-wider">
-                      Enterprise
-                    </h4>
-                    <ul className="grid grid-cols-2 mt-4 gap-y-4">
-                      {/* Enterprise items... */}
-                    </ul>
-                    <a
-                      className="inline-block pb-4 mt-4 text-xs"
-                      href="/enterprise/prebuilt-applications"
-                    >
-                      See all prebuilt applications →
-                    </a>
-                  </div>
-
-                  <h4 className="text-neutral-400 block mt-4 uppercase text-xs tracking-wider">
-                    Government
-                  </h4>
-                  <ul className="grid grid-cols-2 gap-y-4 mt-4 pb-4 border-b border-neutral-800">
-                    {/* Government items... */}
-                  </ul>
-
-                  <h4 className="text-neutral-400 block mt-4 uppercase text-xs tracking-wider">
-                    Resources
-                  </h4>
-                  <ul className="grid grid-cols-2 gap-y-4 mt-4 pb-4 border-b border-neutral-800">
-                    {/* Resources items... */}
-                  </ul>
-
-                  <h4 className="text-neutral-400 block mt-4 uppercase text-xs tracking-wider">
-                    Customers
-                  </h4>
-                  <ul className="grid grid-cols-2 mt-4 gap-y-4">
-                    {/* Customers items... */}
-                  </ul>
-                  <a className="inline-block mt-4 text-xs" href="/customers">
-                    See all customers →
-                  </a>
-
-                  <h4 className="[object Object] block mt-4 pt-4 uppercase text-xs tracking-wider border-t font-unicode border-neutral-800">
-                    <a href="/leaderboard">Leaderboards →</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <nav className="bg-neutral-800 lg:bg-transparent text-center lg:text-left list-none lg:flex py-2 lg:py-0 overflow-hidden md:overflow-visible">
-            <ul className="flex items-center justify-center py-0 text-center list-none -translate-x-2 bg-transparent gap-x-6 md:-translate-x-0 md:gap-x-0 md:grid md:grid-cols-2 justify-items-center lg:flex lg:text-left">
-              <li className="md:mr-[14px]">
-                <Button/>
-              </li>
-              <li className="relative py-2 lg:p-0 lg:mr-6 last:mr-0">
-                <a
-                  className="font-normal text-xs md:text-sm leading-5 block select-none cursor-pointer transition-all duration-300 hover:text-opacity-75 text-white"
-                  href="https://dashboard.scale.com/login"
+            <div
+              className="flex items-center cursor-pointer lg:hidden"
+              onClick={toggleMenu}
+            >
+              {isMenuOpen ? (
+                <svg
+                  className="w-6 h-6 fill-current text-white"
+                  viewBox="0 0 24 24"
                 >
-                  Log In
-                </a>
-              </li>
-            </ul>
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6 fill-current text-white"
+                  viewBox="0 0 24 12"
+                >
+                  <rect width="24" height="2"></rect>
+                  <rect y="5" width="24" height="2"></rect>
+                  <rect y="10" width="24" height="2"></rect>
+                </svg>
+              )}
+            </div>
+          </div>
+
+          {/* Desktop Navigation - always visible on lg screens */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-6">
+            <nav>
+              <ul className="flex space-x-6">
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm">
+                    Products
+                  </button>
+                </li>
+                <li>
+                  <a
+                    href="/leaderboard"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
+                    Leaderboards
+                  </a>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm">
+                    Enterprise
+                  </button>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm">
+                    Government
+                  </button>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm">
+                    Customers
+                  </button>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm">
+                    Resources
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Mobile Navigation - shown when menu is toggled */}
+          <div
+            className={`lg:hidden absolute top-full left-0 right-0 bg-black transition-all duration-300 ease-in-out overflow-hidden ${
+              isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="p-4">
+              <ul className="space-y-4">
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                    Products
+                  </button>
+                </li>
+                <li>
+                  <a
+                    href="/leaderboard"
+                    className="text-white hover:text-opacity-70 text-sm block"
+                  >
+                    Leaderboards
+                  </a>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                    Enterprise
+                  </button>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                    Government
+                  </button>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                    Customers
+                  </button>
+                </li>
+                <li>
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                    Resources
+                  </button>
+                </li>
+                <li className="pt-4 border-t border-gray-700">
+                  <a
+                    href="https://dashboard.scale.com/login"
+                    className="text-white hover:text-opacity-70 text-sm block"
+                  >
+                    Log In
+                  </a>
+                </li>
+                <li>
+                  <Button />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Login and Button - visible on desktop */}
+          <nav className="hidden lg:flex items-center space-x-6">
+          <Button />
+            <a
+              className="text-white hover:text-opacity-70 text-sm"
+              href="https://dashboard.scale.com/login"
+            >
+              Log In
+            </a>
           </nav>
         </div>
       </div>
     </header>
   );
 };
+
 export default HeaderSection;
