@@ -16,13 +16,15 @@ import TestimonialSlider from "@/components/TestimonialSlider";
 import Industry from "@/components/Industry";
 import FutureSection from "@/components/FutureSection";
 import Footer from "@/components/Footer";
+import HeaderSection from "@/components/HeaderSection";
 
  // Ensure BuildAISection.tsx exists in the same directory
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+    <HeaderSection/>
+      {/* <Navbar /> */}
       <Hero />
       <LogoTicker />
       <Research/>
