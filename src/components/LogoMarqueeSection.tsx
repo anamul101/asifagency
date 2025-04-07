@@ -81,14 +81,6 @@ const LogoMarqueeSection = () => {
           srcSet:
             "/_next/image?url=%2Fstatic%2Fimages%2Flogos%2Finvestors%2Fadept.png&w=96&q=100 1x, /_next/image?url=%2Fstatic%2Fimages%2Flogos%2Finvestors%2Fadept.png&w=256&q=100 2x",
         },
-        {
-          alt: "character ai",
-          width: 129,
-          height: 31,
-          src: "/_next/image?url=%2Fstatic%2Fimages%2Flogos%2Fcustomers%2Fcharacterai.png&w=320&q=100",
-          srcSet:
-            "/_next/image?url=%2Fstatic%2Fimages%2Flogos%2Fcustomers%2Fcharacterai.png&w=256&q=100 1x, /_next/image?url=%2Fstatic%2Fimages%2Flogos%2Fcustomers%2Fcharacterai.png&w=320&q=100 2x",
-        },
       ],
     },
     {
@@ -198,9 +190,9 @@ const LogoMarqueeSection = () => {
   return (
     <section
       style={{ backgroundColor: "black", color: "white" }}
-      className="py-18 lg:py-20 bg-transparent pt-0 lg:pt-0 pb-0 lg:pb-0 relative"
+      className=" py-18 lg:py-20 bg-transparent pt-0 lg:pt-0 pb-0 lg:pb-0 relative overflow-hidden"
     >
-      <div className="relative">
+      <div className="relative w-[1024px] mx-auto">
         <div
           className="pt-6 pb-12 sm:pb-16 sm:pt-20 xl:pb-16 xl:pt-24"
           style={{ opacity: 1, visibility: "inherit" }}
@@ -269,7 +261,7 @@ const LogoMarqueeSection = () => {
 
           {/* Mobile Version */}
           <div className="lg:hidden">
-            <p className="mb-10 text-sm leading-6 text-center text-gray-400">
+            <p className="mb-10 text-sm leading-6  text-gray-400">
               Scale works with Generative AI Companies, U.S. Government Agencies
               & Enterprises
             </p>
