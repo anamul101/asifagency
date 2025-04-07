@@ -17,6 +17,7 @@ import Industry from "@/components/Industry";
 import FutureSection from "@/components/FutureSection";
 import Footer from "@/components/Footer";
 import HeaderSection from "@/components/HeaderSection";
+import LogoMarqueeSection from "@/components/LogoMarqueeSection";
 
  // Ensure BuildAISection.tsx exists in the same directory
 
@@ -26,7 +27,8 @@ export default function Home() {
     <HeaderSection/>
       {/* <Navbar /> */}
       <Hero />
-      <LogoTicker />
+      <LogoMarqueeSection/>
+      {/* <LogoTicker /> */}
       <Research/>
       <GenerativeAISection/>
       <BuildAISection/>
