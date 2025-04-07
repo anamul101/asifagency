@@ -13,7 +13,7 @@ const HeaderSection = () => {
   return (
     <header
       style={{ backgroundColor: "black", color: "white" }}
-      className="bg-black text-left relative z-50 bg-offpurple/20 backdrop-blur-[6px] md:backdrop-blur-0 md:bg-transparent overflow-hidden"
+      className="bg-black text-left relative z-50 bg-offpurple/20 backdrop-blur-[6px] md:backdrop-blur-0 md:bg-transparent"
     >
       <hr
         style={{
@@ -23,7 +23,7 @@ const HeaderSection = () => {
         className="absolute bottom-0 w-full h-px -translate-x-1/2 border-0 opacity-10 left-1/2"
       />
 
-      <div className="container w-[1200px] py-2">
+      <div className="container lg:w-[1200px] py-2">
         <div className="flex items-center lg:relative lg:justify-between h-14 lg:h-18">
           <div className="flex justify-between w-full lg:w-auto lg:relative lg:z-10">
             <div className="flex items-center">
@@ -40,9 +40,10 @@ const HeaderSection = () => {
               </div>
             </div>
 
-            <div
-              className="flex items-center cursor-pointer lg:hidden"
+            <button
+              className="flex items-center lg:hidden"
               onClick={toggleMenu}
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? (
                 <svg
@@ -61,7 +62,7 @@ const HeaderSection = () => {
                   <rect y="10" width="24" height="2"></rect>
                 </svg>
               )}
-            </div>
+            </button>
           </div>
 
           {/* Desktop Navigation - always visible on lg screens */}
@@ -107,63 +108,65 @@ const HeaderSection = () => {
 
           {/* Mobile Navigation - shown when menu is toggled */}
           <div
-            className={`lg:hidden absolute top-full left-0 right-0 bg-black transition-all duration-300 ease-in-out overflow-hidden ${
-              isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+            className={`lg:hidden fixed top-14 left-0 right-0 bg-black transition-all duration-300 ease-in-out ${
+              isMenuOpen ? "h-auto opacity-100" : "h-0 opacity-0 overflow-hidden"
             }`}
           >
-            <div className="p-4">
+            <div className="px-4 py-2">
               <ul className="space-y-4">
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
                     Products
                   </button>
                 </li>
                 <li>
                   <a
                     href="/leaderboard"
-                    className="text-white hover:text-opacity-70 text-sm block"
+                    className="text-white hover:text-opacity-70 text-sm block py-2"
                   >
                     Leaderboards
                   </a>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
                     Enterprise
                   </button>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
                     Government
                   </button>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
                     Customers
                   </button>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left">
+                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
                     Resources
                   </button>
                 </li>
-                <li className="pt-4 border-t border-gray-700">
+                <div className="flex items-center justify-between py-4 border-t border-gray-700 mt-2">
+                <li>
+                  <Button />
+                </li>
+                <li>
                   <a
-                    href="https://dashboard.scale.com/login"
-                    className="text-white hover:text-opacity-70 text-sm block"
+                    href="/"
+                    className="text-white hover:text-opacity-70 text-sm block py-2"
                   >
                     Log In
                   </a>
                 </li>
-                <li>
-                  <Button />
-                </li>
+                </div>
               </ul>
             </div>
           </div>
 
           {/* Login and Button - visible on desktop */}
           <nav className="hidden lg:flex items-center space-x-6">
-          <Button />
+            <Button />
             <a
               className="text-white hover:text-opacity-70 text-sm"
               href="https://dashboard.scale.com/login"

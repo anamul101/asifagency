@@ -140,7 +140,7 @@ export const Hero = () => {
         />
 
         {/* Content Section */}
-        <div className="pt-24 xl:pt-44">
+        <div className="pt-10 xl:pt-44">
           <div className="relative z-10">
             {/* Heading */}
             <h1
