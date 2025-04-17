@@ -3,9 +3,9 @@ import ResearchSlider from "./ResearchSlider";
 
 export const Research = () => {
   return (
-    <section className="ρd__all ρd__section ρll3DQ py-10 bg-black text-white">
-      <div className="ρd__all ρd__div ρ_3V1C7 container gap-16">
-        <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-5 md:mb-5 md:mt-12 ρi ρoDvz">
+    <section className=" py-10 bg-black text-white">
+      <div className=" container gap-16">
+        <div className="flex flex-col max-w-3xl mx-auto items-center justify-center text-center mb-5 md:mb-5 md:mt-12">
           {/* Heading */}
           <h2 className="font-aeonik leading-snug lg:leading-[1.25] text-3xl md:text-4.5xl lg:text-5xl [text-wrap:balance]">
             Frontier AI Research
