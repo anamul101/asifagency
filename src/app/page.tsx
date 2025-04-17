@@ -23,7 +23,6 @@ import LogoMarqueeSection from "@/components/LogoMarqueeSection";
 export default function Home() {
   return (
     <>
-      <HeaderSection />
       {/* <Navbar /> */}
       <Hero />
       <LogoMarqueeSection />
@@ -41,7 +40,6 @@ export default function Home() {
       <ProductShowcase />
       <FAQs />
       <CallToAction />
-      <Footer />
     </>
   );
 }

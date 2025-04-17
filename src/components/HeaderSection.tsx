@@ -72,7 +72,7 @@ const HeaderSection = () => {
               <ul className="flex space-x-6">
                 <li>
                   <Link
-                    href="/ProductsHeroSection"
+                    href="/Products"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
                     Products
@@ -133,9 +133,12 @@ const HeaderSection = () => {
             <div className="px-4 py-2">
               <ul className="space-y-4">
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
+                  <Link
+                    href="/Products"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
                     Products
-                  </button>
+                  </Link>
                 </li>
                 <li>
                   <a

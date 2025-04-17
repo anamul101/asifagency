@@ -48,26 +48,31 @@ const ResearchSlider: React.FC = () => {
       title: "Measuring and Reducing Malicious Use With Unlearning",
     },
   ];
-  // slider functionality
-  const [ref] = useKeenSlider<HTMLDivElement>({
-    breakpoints: {
-      "(min-width: 400px)": {
-        slides: { perView: 1, spacing: 5 },
-      },
-      "(min-width: 700px)": {
-        slides: { perView: 2, spacing: 5 },
-      },
-      "(min-width: 1000px)": {
-        slides: { perView: 3, spacing: 10 },
-      },
+ // slider functionality
+ const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  breakpoints: {
+    "(min-width: 400px)": {
+      slides: { perView: 1, spacing: 5 },
     },
-    slides: { perView: 1 },
-  })
+    "(min-width: 700px)": {
+      slides: { perView: 2, spacing: 5 },
+    },
+    "(min-width: 1000px)": {
+      slides: { perView: 3, spacing: 10 },
+    },
+  },
+  slides: { 
+    perView: 1,
+    origin: "center"
+  },
+  // loop: true,
+  // drag: true,
+});
   return (
     <section className="py-5 lg:py-20 bg-transparent pt-0 lg:pt-0 pb-0 lg:pb-0 overflow-hidden bg-black">
       <div className="container relative bg-black text-white py-5">
         <div>
-          <div  className="keen-slider flex !overflow-visible cursor-grab  h-[140px] sm:h-[167px] xl:h-[192px] gap-3  opacity-100 visible">
+          <div  ref={sliderRef} className="keen-slider flex !overflow-visible cursor-grab  h-[140px] sm:h-[167px] xl:h-[192px] gap-3  opacity-100 visible">
             {researchItems.map((items, i) => (
               <a
                 key={i}
