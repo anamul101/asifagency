@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Button from "../utility/button";
 import Menu from "../assets/icons/menu.svg";
+import Link from "next/link";
 
 const HeaderSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,37 +71,52 @@ const HeaderSection = () => {
             <nav>
               <ul className="flex space-x-6">
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm">
+                  <Link
+                    href="/ProductsHeroSection"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
                     Products
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/leaderboard"
+                  <Link
+                    href="/"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
                     Leaderboards
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm">
+                  <Link
+                    href="/enterprise"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
                     Enterprise
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm">
+                  <Link
+                    href="/government"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
                     Government
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm">
+                  <Link
+                    href="/customers"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
                     Customers
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm">
+                  <Link
+                    href="/resources"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
                     Resources
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -109,7 +125,9 @@ const HeaderSection = () => {
           {/* Mobile Navigation - shown when menu is toggled */}
           <div
             className={`lg:hidden fixed top-14 left-0 right-0 bg-black transition-all duration-300 ease-in-out ${
-              isMenuOpen ? "h-auto opacity-100" : "h-0 opacity-0 overflow-hidden"
+              isMenuOpen
+                ? "h-auto opacity-100"
+                : "h-0 opacity-0 overflow-hidden"
             }`}
           >
             <div className="px-4 py-2">
@@ -148,17 +166,17 @@ const HeaderSection = () => {
                   </button>
                 </li>
                 <div className="flex items-center justify-between py-4 border-t border-gray-700 mt-2">
-                <li>
-                  <Button />
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="text-white hover:text-opacity-70 text-sm block py-2"
-                  >
-                    Log In
-                  </a>
-                </li>
+                  <li>
+                    <Button />
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="text-white hover:text-opacity-70 text-sm block py-2"
+                    >
+                      Log In
+                    </a>
+                  </li>
                 </div>
               </ul>
             </div>

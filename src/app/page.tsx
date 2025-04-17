@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { LogoTicker } from "@/components/LogoTicker";
@@ -19,30 +18,30 @@ import Footer from "@/components/Footer";
 import HeaderSection from "@/components/HeaderSection";
 import LogoMarqueeSection from "@/components/LogoMarqueeSection";
 
- // Ensure BuildAISection.tsx exists in the same directory
+// Ensure BuildAISection.tsx exists in the same directory
 
 export default function Home() {
   return (
     <>
-    <HeaderSection/>
+      <HeaderSection />
       {/* <Navbar /> */}
       <Hero />
-      <LogoMarqueeSection/>
+      <LogoMarqueeSection />
       {/* <LogoTicker /> */}
-      <Research/>
-      <GenerativeAISection/>
-      <BuildAISection/>
-      <GenerativeAIApplications/>
-      <CaseStudiesSection/>
-      <TestimonialSlider/>
-      <Industry/>
-      <FutureSection/>
+      <Research />
+      <GenerativeAISection />
+      <BuildAISection />
+      <GenerativeAIApplications />
+      <CaseStudiesSection />
+      <TestimonialSlider />
+      <Industry />
+      <FutureSection />
       {/* <ResearchSlider/> */}
       <Features />
       <ProductShowcase />
       <FAQs />
       <CallToAction />
-      <Footer/>
+      <Footer />
     </>
   );
 }
