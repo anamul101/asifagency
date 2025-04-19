@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(dmSans.className, "antialiased")}>
+      <body style={{backgroundColor:"black"}} className={clsx(dmSans.className, "antialiased")}>
       <HeaderSection/>
        {children}
       <Footer/>
