@@ -7,8 +7,8 @@ export default function Products() {
   return (
     <>
       <ProductsHeroSection/>
-      <FutureSection/>
       <VedioSection/>
+      <FutureSection/>
     </>
   )
 }
