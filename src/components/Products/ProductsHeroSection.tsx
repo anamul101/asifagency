@@ -34,11 +34,17 @@ const ProductsHeroSection = () => {
               </a>
             </div>
 
-            <h1 className="font-aeonik text-4.5xl lg:text-5xl sm:pr-12 md:pr-40 lg:pr-0 w-full [text-wrap:balance]">
+            <h1
+              className="font-aeonik text-4xl pb-2 md:text-5xl lg:text-5xl text-center w-full [text-wrap:balance] 
+                px-4 sm:px-0 sm:pr-12  lg:pr-[16px] text-gray-70"
+            >
               Generative AI Data Engine
             </h1>
 
-            <h2 className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+            <h2
+              className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl 
+                px-4 sm:px-0"
+            >
               Powering the Next Frontier of AI.
             </h2>
 
