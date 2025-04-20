@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import productimg1 from "../../assets/images/products/productimg1.webp";
 import productimg2 from "../../assets/images/products/productimg2.svg";
 import productimg3 from "../../assets/images/products/productimg3.svg";
@@ -20,50 +20,90 @@ interface CustomerCard {
 const CustomersSection = () => {
   const customers: CustomerCard[] = [
     {
-      id: 'time',
-      title: 'TIME AI',
-      href: '/customers/time',
-      imageSrc:productimg7.src,
-      imageAlt: 'time',
-      description: 'Disrupting the media industry with TIME AI.'
+      id: "time",
+      title: "TIME AI",
+      href: "/customers/time",
+      imageSrc: productimg7.src,
+      imageAlt: "time",
+      description: "Disrupting the media industry with TIME AI.",
     },
     {
-      id: 'cohere',
-      title: 'Cohere',
-      href: '/customers/cohere',
-      imageSrc:productimg1.src,
-      imageAlt: 'cohere',
-      description: 'Cohere Enhances its Large Language Models with Scale.'
+      id: "cohere",
+      title: "Cohere",
+      href: "/customers/cohere",
+      imageSrc: productimg1.src,
+      imageAlt: "cohere",
+      description: "Cohere Enhances its Large Language Models with Scale.",
+    },
+    {
+      id: "cohere",
+      title: "Cohere",
+      href: "/customers/cohere",
+      imageSrc: productimg1.src,
+      imageAlt: "cohere",
+      description: "Cohere Enhances its Large Language Models with Scale.",
+    },
+    {
+      id: "cohere",
+      title: "Cohere",
+      href: "/customers/cohere",
+      imageSrc: productimg1.src,
+      imageAlt: "cohere",
+      description: "Cohere Enhances its Large Language Models with Scale.",
+    },
+    {
+      id: "cohere",
+      title: "Cohere",
+      href: "/customers/cohere",
+      imageSrc: productimg1.src,
+      imageAlt: "cohere",
+      description: "Cohere Enhances its Large Language Models with Scale.",
+    },
+    {
+      id: "cohere",
+      title: "Cohere",
+      href: "/customers/cohere",
+      imageSrc: productimg1.src,
+      imageAlt: "cohere",
+      description: "Cohere Enhances its Large Language Models with Scale.",
     },
     // Add all other customers following the same pattern
     // ...
   ];
 
   return (
-    <section className="py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <section className="py-12 bg-black">
+      <div className="container mx-auto w-[1280px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {customers.map((customer) => (
-            <div key={customer.id} className="group transition-all duration-300 hover:-translate-y-1">
+            <div
+              key={customer.id}
+              className="group transition-all duration-300 hover:-translate-y-1 border border-[#e5e7eb] rounded-lg border-transparent hover:border-indigo-200"
+            >
               <a
                 href={customer.href}
-                className="block h-full p-6 bg-[#111]  rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300"
+                className="block h-full overflow-hidden rounded-lg bg-black hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative h-40 w-full mb-4 flex items-center justify-center ">
-                  <Image
-                    src={customer.imageSrc}
-                    alt={customer.imageAlt}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    loading="lazy"
-                  />
+                {/* Image container with #111 background */}
+                <div className="bg-[#111] p-6">
+                  <div className="relative h-48 w-full mx-auto flex items-center justify-center">
+                    <Image
+                      src={customer.imageSrc}
+                      alt={customer.imageAlt}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-                <div className="text-center bg-black bg-opacity-50">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+
+                {/* Text container with transparent black overlay */}
+                <div className="p-4 bg-gradient-to-b from-black/80 to-black/60 backdrop-blur-sm">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
                     {customer.title}
                   </h3>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+                  <p className="mt-2 text-[18px] text-white line-clamp-2">
                     {customer.description}
                   </p>
                 </div>
