@@ -73,37 +73,51 @@ const CustomersSection = () => {
 
   return (
     <section className="py-12 bg-black">
-      <div className="container mx-auto w-[1280px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+      <div className="container mx-auto px-4 xl:px-0 max-w-7xl">
+        {" "}
+        {/* Changed from fixed width to responsive max-width */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {" "}
+          {/* Improved grid responsive structure */}
           {customers.map((customer) => (
             <div
               key={customer.id}
-              className="group transition-all duration-300 hover:-translate-y-1 border border-white/10 rounded-lg  hover:border-white/30 hover:shadow-white/100 hiver:shadow-lg "
+              className="group transition-all duration-300 hover:-translate-y-1 border border-white/15 rounded-lg hover:border-white/30 hover:shadow-lg hover:shadow-white/10" /* Fixed typo in hover class */
             >
               <a
                 href={customer.href}
-                className="block h-full overflow-hidden rounded-lg bg-black hover:shadow-xl transition-all duration-300"
+                className="block h-full overflow-hidden rounded-lg bg-black"
               >
-                {/* Image container with #111 background */}
-                <div className="bg-[#111] p-6">
-                  <div className="relative h-48 w-full mx-auto flex items-center justify-center">
+                {/* Image container */}
+                <div className="bg-[#111] p-4 md:p-6">
+                  {" "}
+                  {/* Responsive padding */}
+                  <div className="relative h-40 md:h-48 lg:w-[70%]  mx-auto flex items-center justify-center">
+                    {" "}
+                    {/* Responsive height */}
                     <Image
                       src={customer.imageSrc}
                       alt={customer.imageAlt}
                       fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-contain p-2 md:p-4" /* Responsive padding */
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
                       loading="lazy"
                     />
                   </div>
                 </div>
 
-                {/* Text container with transparent black overlay */}
-                <div className="p-4 bg-gradient-to-b from-black/80 to-black/60 backdrop-blur-sm">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                {/* Text container */}
+                <div className="p-4 md:p-6 bg-gradient-to-b from-black/80 to-black/60 backdrop-blur-sm">
+                  {" "}
+                  {/* Responsive padding */}
+                  <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    {" "}
+                    {/* Responsive text */}
                     {customer.title}
                   </h3>
-                  <p className="mt-2 text-[18px] text-white line-clamp-2">
+                  <p className="mt-2 text-sm md:text-base text-white/80 line-clamp-2">
+                    {" "}
+                    {/* Responsive text and opacity */}
                     {customer.description}
                   </p>
                 </div>
