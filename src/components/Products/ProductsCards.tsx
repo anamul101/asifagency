@@ -78,7 +78,7 @@ const CustomersSection = () => {
           {customers.map((customer) => (
             <div
               key={customer.id}
-              className="group transition-all duration-300 hover:-translate-y-1 border border-[#e5e7eb] rounded-lg border-transparent hover:border-indigo-200"
+              className="group transition-all duration-300 hover:-translate-y-1 border border-white/10 rounded-lg  hover:border-white/30 hover:shadow-white/100 hiver:shadow-lg "
             >
               <a
                 href={customer.href}
