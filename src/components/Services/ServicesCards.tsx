@@ -60,37 +60,31 @@ export const ServicesCards = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
         {/* Tabs Navigation */}
         <div className="relative mb-8 md:mb-12">
-          <div className="flex space-x-8 border rounded-full border-white/10">
+          <div className="flex justify-center space-x-4 border w-[200px] p-2 rounded-[48px] border-white/10 mb-4">
             <button 
               onClick={() => setActiveTab('upcoming')}
-              className="group relative pb-4"
+              className="group relative"
             >
               <span className={`text-lg font-medium ${
                 activeTab === 'upcoming' 
-                  ? 'text-white' 
-                  : 'text-white/50 hover:text-white'
+                  ? 'text-white bg-[#111] px-2 py-2 rounded-full ' 
+                  : 'text-white hover:text-white'
               } transition-colors`}>
                 Upcoming
               </span>
-              <span className={`absolute bottom-0 left-0 h-0.5 w-full ${
-                activeTab === 'upcoming' ? 'bg-white' : 'bg-transparent'
-              } transition-all duration-300`}></span>
             </button>
             
             <button 
               onClick={() => setActiveTab('past')}
-              className="group relative pb-4"
+              className="group relative"
             >
               <span className={`text-lg font-medium ${
                 activeTab === 'past' 
-                  ? 'text-white' 
-                  : 'text-white/50 hover:text-white'
+                  ? 'text-white bg-[#111] px-4 py-2 rounded-full' 
+                  : 'text-white hover:text-white'
               } transition-colors`}>
                 Past
               </span>
-              <span className={`absolute bottom-0 left-0 h-0.5 w-full ${
-                activeTab === 'past' ? 'bg-white' : 'bg-transparent'
-              } transition-all duration-300`}></span>
             </button>
           </div>
         </div>
