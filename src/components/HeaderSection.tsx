@@ -80,10 +80,10 @@ const HeaderSection = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="/Services"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
-                    Leaderboards
+                    Services
                   </Link>
                 </li>
                 <li>
