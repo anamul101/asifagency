@@ -141,12 +141,12 @@ const HeaderSection = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="/leaderboard"
-                    className="text-white hover:text-opacity-70 text-sm block py-2"
+                  <Link
+                    href="/Services"
+                    className="text-white hover:text-opacity-70 text-sm"
                   >
-                    Leaderboards
-                  </a>
+                    Services
+                  </Link>
                 </li>
                 <li>
                   <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
