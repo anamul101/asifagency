@@ -13,9 +13,9 @@ export const ServicesCards = () => {
   const Services = [
     {
       id: 1,
-      title: "DPRTE 2025 Conference",
+      title: "DPRTE 2025 DEVELOPER",
       date: "March 26, 2025",
-      category: "Conference",
+      category: "DEVELOPER",
       image: services1,
       url: "https://www.dprte.co.uk/",
       isUpcoming: true,
@@ -106,12 +106,17 @@ export const ServicesCards = () => {
         {/* Events Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {filterEvents(activeTab).map((event) => (
-            <Link
-              key={event.id}
-              href={`/Service/${event.id}`}
-              className="group block overflow-hidden rounded-lg border border-white/10 bg-[#111] hover:border-white/20 transition-all duration-300"
-            >
-              <div className="relative aspect-video sm:aspect-[4/3]">
+            <Link 
+            key={event.id}
+            href={`/Service/${event.id}`}
+            className="group block overflow-hidden rounded-lg border border-white/10 bg-[#111] hover:border-white/20 transition-all duration-300"
+            onClick={() => {
+              // Store the clicked service in sessionStorage
+              sessionStorage.setItem(event.id.toString(), JSON.stringify(event));
+            }}
+          >
+            {/* ... rest of your card content ... */}
+            <div className="relative aspect-video sm:aspect-[4/3]">
                 <Image
                   src={event.image}
                   alt={event.title}
@@ -133,7 +138,7 @@ export const ServicesCards = () => {
                   {event.title}
                 </h3>
               </div>
-            </Link>
+          </Link>
           ))}
         </div>
       </div>
