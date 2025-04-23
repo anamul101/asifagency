@@ -112,10 +112,10 @@ const HeaderSection = () => {
                 </li>
                 <li>
                   <Link
-                    href="/resources"
+                    href="/About"
                     className="text-white hover:text-opacity-70 text-sm"
                   >
-                    Resources
+                    About
                   </Link>
                 </li>
               </ul>
@@ -164,9 +164,12 @@ const HeaderSection = () => {
                   </button>
                 </li>
                 <li>
-                  <button className="text-white hover:text-opacity-70 text-sm w-full text-left py-2">
-                    Resources
-                  </button>
+                <Link
+                    href="/About"
+                    className="text-white hover:text-opacity-70 text-sm"
+                  >
+                    About
+                  </Link>
                 </li>
                 <div className="flex items-center justify-between py-4 border-t border-gray-700 mt-2">
                   <li>

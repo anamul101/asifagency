@@ -21,7 +21,7 @@ const ProductsHeroSection = () => {
 
   return (
     <section className="bg-black text-white w-full overflow-hidden">
-      <div className="container mx-auto px-4 py-10 md:py-20 lg:py-24 xl:max-w-7xl">
+      <div className="container mx-auto px-4 py-10 md:py-20 lg:py-0 xl:max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
